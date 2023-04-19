@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Navigation from "navigation";
 
 function App() {
   return (
-    <div className="bg-red-100">
-     Hello World
-    </div>
+    <ChakraProvider>
+      <Navigation />
+    </ChakraProvider>
   );
 }
 
