@@ -1,14 +1,33 @@
 import React from "react";
-import { ButtonProps } from "../../utils/interfaces";
+import { Button as ButtonBase } from "@chakra-ui/react";
+import { ButtonProps } from "utils/interfaces";
 
-const Button = ({ type, className, onClick, text }: ButtonProps) => {
-	return (
-		<div>
-			<button type={type} className={className} onClick={onClick}>
-				{text}
-			</button>
-		</div>
-	);
+export const Button = ({
+  bgColor,
+  color,
+  border,
+  height,
+  width,
+  label,
+  onClick,
+  alignSelf,
+}: ButtonProps) => {
+  return (
+    <ButtonBase
+      bg={bgColor || "#ffffff"}
+      border={border || "transparent"}
+      borderRadius="8px"
+      color={color || "#080808"}
+      fontSize="18px"
+      fontWeight="600"
+      height={height}
+      width={width}
+      onClick={onClick}
+      alignSelf={alignSelf}
+    >
+      {label}
+    </ButtonBase>
+  );
 };
 
 export default Button;
