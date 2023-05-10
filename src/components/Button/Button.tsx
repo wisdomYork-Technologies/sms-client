@@ -14,7 +14,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <ButtonBase
-      bg={bgColor || "#ffffff"}
+      bg={bgColor || "#E2E8F0"}
       border={border || "transparent"}
       borderRadius="8px"
       color={color || "#080808"}
